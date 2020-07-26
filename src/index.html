@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBP - Sociedade Brasileira de Pediatria - SBP</title>
+  <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./../dist/css/reset.css">
+  <link rel="stylesheet" href="./../dist/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Informar Amamentar Imunizar</h1>
+    </div>
+    <div class="wrapper-hambuguer" onclick="menuActive()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="menu">
+      <a href="#sobre" onclick="menuActive()">Sobre a Campanha</a>
+      <a href="#vacina" onclick="menuActive()">Vacina e leite materno</a>
+      <a href="#covid-19" onclick="menuActive()">Covid-19</a>
+      <a href="#pandemia" onclick="menuActive()">Vacinação de rotina na pandemia</a>
+      <a href="#onde-vacinar" class="btn" onclick="menuActive()">Saiba onde se vacinar</a>
+    </nav>
+  </header>
+  <main class="wrapper">
+    <section class="wrapper-banner">
+      <img src="./img/banner.png" alt="Amamentar" class="background-banner">
+      <img src="./img/banner-mobile.png" alt="Amamentar" class="background-banner-mobile">
+      <div id="slider">
+          <img class="active" src="./img/banner-1.png" alt="">
+          <img src="./img/banner-2.png" alt="">
+          <img src="./img/banner-3.png" alt="">
+          <img src="./img/banner-4.png" alt="">
+          <ul>
+            <li onclick="selectBullet(0);" class="active"></li>
+            <li onclick="selectBullet(1);"></li>
+            <li onclick="selectBullet(2);"></li>
+            <li onclick="selectBullet(3);"></li>
+          </ul>
+      </div>
+    </section>
+    <section class="wrapper-about" id="sobre">
+      <div class="center">
+        <div class="left" id="video-campanha">
+          <img onclick="incorporarVideo();" src="./img/video.png" title="Depoimento da Dra. Luciana Rodrigues da Silva" alt="depoimento da Dra. Luciana Rodrigues da Silva">
+        </div>
+        <div class="right">
+          <h2 class="title">Sobre a campanha</h2>
+          <p>A discussão sobre o reforço da imunidade para manutenção da saúde ganhou, no contexto atual, o maior protagonismo das últimas décadas. Considerando que a constituição das defesas nos primeiros anos de vida depende, sobretudo, da dupla amamentação e vacinação, a campanha da SBP deste ano visa conscientizar a população sobre como priorizá-la, aproveitando a oportunidade de ouro de assegurar um desenvolvimento saudável para toda a vida. </p>
+          <span class="info">Veja um depoimento da Dra. Luciana Rodrigues da Silva, primeira mulher a presidir a Sociedade Brasileira de Pediatria.</span>
+        </div>
+      </div>
+    </section>
+    <section class="wrapper-vaccine" id="vacina">
+      <div class="center">
+        <h2 class="bold">Vacina e leite materno:</h2>
+        <h2 class="title">dupla inseparável da imunidade infantil</h2>
+        <span class="mobile">Vacina e leite materno:<span> dupla inseparável da imunidade infantil</span></span>
+        <p>Cada um atua de uma maneira na constituição das defesas. E, juntos, minimizam significativamente os riscos de doenças. Quer argumentos sólidos?</p>
+      </div>
+      <div class="info-slide">
+        <i class="left" onclick="prevSlide();"></i>
+        <ul id="slide-vacina">
+          <li class="active"><img src="./../src/img/slide-1.png" alt=""></li>
+          <li><img src="./../src/img/slide-2.png" alt=""></li>
+          <li><img src="./../src/img/slide-3.png" alt=""></li>
+          <li><img src="./../src/img/slide-4.png" alt=""></li>
+          <li><img src="./../src/img/slide-5.png" alt=""></li>
+        </ul>
+        <i class="right" onclick="nextSlide();"></i>
+      </div>
+      <div class="center">
+        <div class="wrapper-vaccine_bottom">
+          <div class="left-view">
+            <span class="info">Viu só por que as duas formas de proteção devem ser adotadas em conjunto? </span>
+            <p>Confira mais detalhes em: </p>
+          </div>
+          <a class="btn" href="https://www.sbp.com.br/fileadmin/user_upload/22467f-NA_-_AleitMat_tempos_COVID-19-_na_matern_e_apos_alta.pdf" target="_blank">Aleitamento materno e vacinas</a>
+          <a class="btn" href="//www.sbp.com.br/fileadmin/user_upload/beneficios-leite-materno.pdf" target="_blank">Benefícios do leite materno</a>
+        </div>
+      </div>
+    </section>
+    <section class="wrapper-pandemic" id="pandemia">
+      <div class="center">        
+        <div class="left">
+          <img src="./img/vacina.png" alt="Vacinação de rotina e pandemia">
+        </div>
+        <div class="right">
+          <h2 class="title"><strong>Vacinação de rotina e pandemia:</strong> como fica?</h2>
+          <span class="subtitle"><strong>117 milhões</strong> de crianças em <strong>117 milhões </strong>podem ficar sem imunização contra sarampo, por causa da COVID-19 , segundo o UNICEF e a Organização Mundial de Saúde. </span>
+          <p>Isso sem falar nas demais doenças imunopreveníveis, acarretando retrocesso no controle de suas taxas. Em curto e médio prazos, para crianças, <strong> as consequências podem superar as provocadas pela própria pandemia. </strong>Para evitar que isso aconteça, nós, da SBP, nos unimos ao UNICEF e à Sociedade Brasileira de Imunizações (SBIm) para criar a cartilha Pandemia da Covid-19 – O que muda na rotina das imunizações. </p>
+          <p>O <strong>acesso é gratuito</strong> e visa orientar as famílias e os profissionais de saúde sobre como garantir a proteção das crianças de forma segura.</p>
+          <a class="btn" href="https://sbim.org.br/images/files/cartilha-campanha-sbim-sbp-unicef-200611b-web.pdf" target="_blank">Acesse a cartilha</a>
+        </div>
+      </div>
+    </section>
+    <section class="wrapper-protect">
+      <div class="center">
+        <div class="left">
+          <h2 class="title">A vacinação da gestante <strong>protege o bebê?</strong></h2>
+          <p class="vaccine-protect">Com certeza! E essa imunidade herdada ajuda a prevenir doenças até que a criança complete seu esquema vacinal, desenvolvendo suas próprias defesas. Quer um exemplo?</p>
+          <div class="wrapper-background">
+            <span class="info-number">69</span>
+            <span class="info-text">é a taxa de redução na incidência de gripe em bebês de mães vacinadas. </span>
+          </div>
+          <p>Outra prioridade é a coqueluche, uma das principais causas de morte em lactentes: a imunização materna é uma das principais estratégias para evitar o problema.</p>
+          <span class="info">Confira links importantes:</span>
+          <div class="links">
+            <a class="btn" href="https://www.sbp.com.br/especiais/pediatria-para-familias/gestacao-e-parto/vacinando-a-gestante-e-protegendo-o-bebe/" target="_blank">Detalhes sobre os benefícios da vacinação</a>
+            <a class="btn" href="https://sbim.org.br/images/calendarios/calend-sbim-gestante.pdf" target="_blank">Calendário de vacinação da gestante</a>
+          </div>
+        </div>
+        <div class="right">
+          <img src="./img/amamentar.png" alt="amamentar">
+        </div>
+        <div class="mobile">
+          <h2 class="title">A vacinação da gestante <strong>protege o bebê?</strong></h2>
+          <p>Com certeza! E essa imunidade herdada ajuda a prevenir doenças até que a criança complete seu esquema vacinal, desenvolvendo suas próprias defesas. Quer um exemplo?</p>
+        </div>  
+      </div>
+    </section>
+    <section class="wrapper-covid" id="covid-19">
+      <img class="mobile" src="./../src/img/covid.png" alt="">
+      <div class="center">
+        <h2 class="title"><strong>Covid-19: </strong>amamentação deve ser mantida, mesmo em casos de infecção materna</h2>
+        <p>Não há evidências de transmissão do coronavírus via aleitamento. Portanto, com determinadas precauções, os benefícios, sobretudo para a imunidade do bebê, superam os riscos. Veja as recomendações, conforme as condições de saúde da mãe.</p>
+      </div>
+      <div class="wrapper-list">
+        <div class="covid-list">
+          <ul>
+            <li class="icon icon-asymptomatic">
+              <img src="./img/mascara.png" alt="Mãe assintomática">
+              <h5><strong class="color">Mãe assintomática, sem contato domiciliar com pessoa infectada ou com sintomas suspeitos:</strong> contato pele a pele e amamentação já na primeira hora de vida.</h5>
+            </li>
+            <li class="icon icon-symptomatic">
+              <img src="./img/virus.png" alt="Mãe sintomática">
+              <h5><strong class="color">Mãe sintomática, diagnosticada com Covid-19 ou que conviva com pessoa infectada ou com suspeita:</strong> o aleitamento deve ser adiado até a limpeza da parturiente (banho no leito), troca de máscara, touca, camisola e lençóis. Devese manter distância de dois metros entre o leito materno e o berço; a mãe deve usar máscara e lavar as mãos antes e depois das mamadas. </h5>
+            </li>
+            <li class="icon icon-neonatal">
+              <img src="./img/saude.png" alt="UTI neonatal">
+              <h5><strong class="color">UTI neonatal:</strong> o leite materno deve ser oferecido, mas a amamentação só deve ser presencial, com contato pele a pele, se a mãe for assintomática e sem histórico de contato de risco para Covid-19 nos 14 dias anteriores. </h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="center">
+        <span class="info">Tenha mais detalhes sobre as recomendações de amamentação durante a pandemia e as precauções após a alta hospitalar, clicando abaixo.</span>
+        <a class="btn" href="https://www.sbp.com.br/fileadmin/user_upload/22467f-NA_-_AleitMat_tempos_COVID-19-_na_matern_e_apos_alta.pdf" target="_blank">Confira</a>
+      </div>
+    </section>
+    <section class="wrapper-question">
+      <h6>Você sabia?</h6>
+      <h6><strong>Amamentar no momento da vacinação injetável ou logo antes dela ajuda a relaxar e a distrair a criança, amenizando o desconforto?</strong></h6>
+      <h6>A recomendação tem respaldo da Organização Mundial da Saúde. Guarde essa dica!</h6>
+    </section>
+    <section class="wrapper-infos">
+      <div class="center">
+        <div class="left">
+          <h2><strong>Proteção em dia</strong></h2>
+          <p>Para ser efetiva, a rotina de vacinação precisa ser seguida à risca, com todas as doses e reforços previstos. No entanto, o calendário tem particularidades em função da faixa etária da criança, do histórico de saúde e imunização, e de condições específicas, como a prematuridade. Para manter seu filho protegido, fique de olho nas recomendações da SBP, nos links abaixo:</p>
+          <div class="links">
+            <a class="btn" href="https://www.sbp.com.br/fileadmin/user_upload/22268g-DocCient-Calendario_Vacinacao_2020.pdf" target="_blank">Calendário de Vacinação da SBP 2020</a>
+            <a class="btn" href="https://www.sbp.com.br/fileadmin/user_upload/20947d-GPA_-_Vacinacao_em_pretermos-ok.pdf" target="_blank">Vacinação em pretermos</a>
+            <a class="btn" href="https://www.sbp.com.br/especiais/pediatria-para-familias/vacinas/aleitamento-materno-e-vacinas/" target="_blank">Aleitamento materno e vacinas</a>
+          </div>
+        </div>
+        <div class="right">
+          <h2><strong>Vacinar é seguro!</strong></h2>
+          <p>Por conta do receio gerado pelas ondas de fake news, é importante ressaltar que a imunização é segura e seus benefícios superam, de longe, os riscos representados pelas doenças que ela previne. Reações leves, como febre e dor local, podem ocorrer com relativa frequência, mas as graves são extremamente raras. A anafilaxia, por exemplo — um quadro severo associado à alergia — tem incidência inferior a 0,1% dos vacinados. </p>
+          <p>Ou seja, salvo em situações muito específicas, em que a imunização é contraindicada, é fundamental manter o esquema vacinal rigorosamente. Converse com o pediatra do seu filho. Para mais informações, clique abaixo.</p>
+          <a class="btn" href="//familia.sbim.org.br/seguranca" target="_blank">Confira</a>
+        </div>
+      </div>
+    </section>
+    <section class="wrapper-maps" id="onde-vacinar">
+      <div class="center">
+        <h2>Localize onde se vacinar</h2>
+      </div>
+      <div class="locate-map">
+        <!--  -->
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="wrapper-footer">
+      <span class="title">Iniciativa</span>
+      <ul>
+        <li class="icon icon-sbp">Sociedade Brasileira de Pediatria</li>
+      </ul>
+    </div>
+    <div class="wrapper-footer">
+      <span class="title">Patrocínio</span>
+      <ul>
+        <li class="icon icon-gsk">GSK</li>
+        <li class="icon icon-sanofi">Sanofi</li>
+        <li class="icon icon-pfizer">PFizer</li>
+        <li class="icon icon-jj">Johnson & Johnson</li>
+      </ul>
+    </div>
+    <div class="wrapper-footer">
+      <span class="title">Apoio</span>
+      <ul>
+        <li class="icon icon-sbim">SBIM</li>
+        <li class="icon icon-unicef">Unicef</li>
+        <li class="icon icon-opas">OPAS</li>
+      </ul>
+    </div>
+  </footer>
+  <script src="./../dist/js/index.js"></script>
+</body>
+</html>
